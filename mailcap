@@ -1,0 +1,17 @@
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+#text/html;                      links %s; nametemplate=%s.html
+#text/html;                      links -dump %s; nametemplate=%s.html; copiousoutput
+
+#text/html;                      lynx %s; nametemplate=%s.html
+#text/html;                      lynx -dump %s; nametemplate=%s.html; copiousoutput
+
+# for mutt to view html e-mails
+#text/html;html2txt %s; copiousoutput
+
+#text/plain; vim %s
+
+#text/html; lynx -dump %s | more
+#text/html; lynx %s
+#text/*; more
+
+#text/html; brave %s

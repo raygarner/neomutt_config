@@ -1,0 +1,23 @@
+set folder = "imaps://ray@perfectcast.co.uk@mail.perfectcast.co.uk:993"
+
+set smtp_url = "smtps://ray@perfectcast.co.uk@mail.perfectcast.co.uk:465"
+
+set from = "ray@perfectcast.co.uk"
+
+set realname = "Ray Garner"
+
+set spoolfile = "+INBOX"
+set record = "+INBOX.Sent"
+set trash = "+INBOX.Trash"
+set postponed = "+INBOX.Drafts"
+
+mailboxes =INBOX =INBOX.Sent =INBOX.Trash =INBOX.Drafts =INBOX.Junk =INBOX.Other
+
+source /home/ray/.config/neomutt/colour.muttrc
+
+set sort = reverse-date-received
+
+set mailcap_path 	= /home/ray/.config/neomutt/mailcap
+
+auto_view text/html
+alternative_order text/plain text/enriched text/html
