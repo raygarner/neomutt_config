@@ -19,5 +19,10 @@ set sort = reverse-date-received
 
 set mailcap_path 	= /home/ray/.config/neomutt/mailcap
 
+#auto_view text/*
 auto_view text/html
 alternative_order text/plain text/enriched text/html
+
+#macro pager \cb 'urlview' 'Follow links with urlview'
+#macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+#macro index,pager \cb "| grep -Eom1 '(http|https)://[a-zA-Z0-9./?=_-&]*' > /tmp/mutt_url; brave $(cat /tmp/mutt_url); rm /tmp/mutt_url<enter>"
