@@ -24,6 +24,7 @@ bind index,pager g noop
 bind index,pager M noop
 bind index,pager C noop
 bind index gg first-entry
+bind index,pager gm imap-fetch-mail #manually added
 unmailboxes *
 
 set spoolfile = "+INBOX"
